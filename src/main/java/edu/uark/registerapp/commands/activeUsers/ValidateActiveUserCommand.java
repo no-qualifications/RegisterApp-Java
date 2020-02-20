@@ -34,6 +34,7 @@ public class ValidateActiveUserCommand implements ResultCommandInterface<ActiveU
 	public ValidateActiveUserCommand setSessionKey(final String sessionKey) {
 		this.sessionKey = sessionKey;
 		return this;
+		
 	}
 
 	@Autowired
