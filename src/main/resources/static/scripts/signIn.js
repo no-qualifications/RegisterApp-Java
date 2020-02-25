@@ -4,5 +4,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 function validateForm() {
 	// TODO: Validate the user input
-	return true;
+	var employeeid = document.getElementById("employeeid").value;
+	var password = document.getElementById("password").value;
+	
+	if(employeeid !='' && typeof employeeid == 'number' && password != '')
+	{
+		return true;
+	}
+
+
 }
