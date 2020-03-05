@@ -11,7 +11,6 @@ import org.springframework.web.servlet.ModelAndView;
 import edu.uark.registerapp.controllers.enums.ViewNames;
 
 @Controller
-@RequestMapping(value = "/")
 @RequestMapping(value = "/signIn")
 public class SignInRouteController extends BaseRouteController {
 	// TODO: Route for initial page load
@@ -26,6 +25,7 @@ public class SignInRouteController extends BaseRouteController {
 		//  and the "id" property of the (HttpServletRequest)request.getSession() variable
 		//  to sign in the user
 
+		
 		return new ModelAndView(
 			REDIRECT_PREPEND.concat(
 				ViewNames.MAIN_MENU.getRoute()));
