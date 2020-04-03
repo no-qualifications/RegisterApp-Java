@@ -51,6 +51,18 @@ public class ProductEntity {
 		this.count = count;
 		return this;
 	}
+  
+  @Column(name="price")
+   private long price;
+
+ public long getPrice() {
+   return this.price;
+ }
+
+ public ProductEntity setPrice(final long price) {
+   this.price = price;
+   return this;
+ }
 
 	@Column(name = "createdon", insertable = false, updatable = false)
 	@Generated(GenerationTime.INSERT)
