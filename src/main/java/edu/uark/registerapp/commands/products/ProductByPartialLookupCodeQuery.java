@@ -1,7 +1,8 @@
 package edu.uark.registerapp.commands.products;
 
 import java.util.LinkedList;
-import java.util.Optional;
+import java.util.List;
+
 
 
 import org.apache.commons.lang3.StringUtils;
@@ -9,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import edu.uark.registerapp.commands.ResultCommandInterface;
-import edu.uark.registerapp.commands.exceptions.NotFoundException;
 import edu.uark.registerapp.commands.exceptions.UnprocessableEntityException;
 import edu.uark.registerapp.models.api.Product;
 import edu.uark.registerapp.models.entities.ProductEntity;
@@ -21,15 +21,15 @@ public class ProductByPartialLookupCodeQuery implements ResultCommandInterface<P
 	public Product[] execute() {
 		this.validateProperties();
 		
-    List<Product> products = new LinkedList<Product>();
+    	List<Product> products = new LinkedList<Product>();
 		final List<ProductEntity> productEntities =
 			this.productRepository.findByLookupCodeContainingIgnoreCase(
       this.partialLookupCode);
       
       for (ProductEntity productEntity : productEntities){
-        
-        
-      }
+        products.add(new Product(productEntity));
+	  }
+	  return (Product[])products.toArray();
 	}
 
 	// Helper methods
