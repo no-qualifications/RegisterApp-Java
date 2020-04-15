@@ -17,7 +17,7 @@ import edu.uark.registerapp.models.entities.ActiveUserEntity;
 
 @Controller
 @RequestMapping(value = "/shoppingCart")
-public class MainMenuRouteController extends BaseRouteController {
+public class ShoppingCartRouteController extends BaseRouteController {
 	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView start(
 		@RequestParam final Map<String, String> queryParameters,
