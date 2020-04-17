@@ -14,7 +14,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
   
   function addActionClick(){
-    
+    var newDiv = document.createElement("div"); 
+    var newContent = document.createTextNode("Product"); 
+    newDiv.appendChild(newContent);
+
+    var currentDiv = document.getElementById("actions"); 
+    document.body.insertBefore(newDiv, currentDiv);
   }
 
   //Getters and setters

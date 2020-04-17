@@ -48,10 +48,10 @@
 		</div>
 
 		<div class="productsInCart">
-			
+
 		</div>
 
-		<div class="shoppingCartActionsWrapper" th:class="(not ${isElevatedUser} OR not ${#strings.isEmpty(errorMessage)}) ? hidden : ''">
+		<div id ="actions" class="shoppingCartActionsWrapper" th:class="(not ${isElevatedUser} OR not ${#strings.isEmpty(errorMessage)}) ? hidden : ''">
 			<br />
 			
 			<button id="addButton" type="button" class="action">Add</button>
