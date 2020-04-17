@@ -1,4 +1,3 @@
-document.body.onload = addElement;
 document.addEventListener("DOMContentLoaded", function(event) {
   
   getCancelActionElement().addEventListener(
@@ -8,14 +7,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
   getCheckOutActionElement().addEventListener(
     "click",
     () => { window.location.assign("/transactionSummary"); });
+
+  getAddActionElement().addEventListener(
+    "click",
+    () => { addActionElement; });  
     
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-	getAddActionElement.addEventListener("click", addActionClick);
-});
+  document.body.onload = addElement;
   
-  function addActionClick(event){
+  function addActionClick() {
     const addActionElement = event.target;
     addActionElement.disabled = true;
     var newDiv = document.createElement("div"); 
