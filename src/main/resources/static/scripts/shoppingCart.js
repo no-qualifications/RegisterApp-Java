@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     
   getAddActionElement().addEventListener(
     "click",
-    () => { addActionClick });
+    () => { addActionClick(); });
 });
   
   function addActionClick(){
