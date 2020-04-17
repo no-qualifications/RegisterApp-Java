@@ -7,14 +7,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
   getCheckOutActionElement().addEventListener(
     "click",
     () => { window.location.assign("/transactionSummary"); });
+
+  getAddActionElement().addEventListener(
+    "click",
+    () => { addActionElement; });  
     
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-	getAddActionElement.addEventListener("click", addActionClick);
-});
+
   
-  function addActionClick(event){
+  function addActionClick() {
     const addActionElement = event.target;
     addActionElement.disabled = true;
     var newDiv = document.createElement("div"); 
