@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
   function addActionClick(event){
     const addActionElement = event.target;
-    saveActionElement.disabled = true;
+    addActionElement.disabled = true;
     var newDiv = document.createElement("div"); 
     var newContent = document.createTextNode("Product"); 
     newDiv.appendChild(newContent);
