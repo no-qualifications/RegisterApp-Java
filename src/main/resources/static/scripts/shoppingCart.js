@@ -8,29 +8,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
     "click",
     () => { window.location.assign("/transactionSummary"); });
 
-  getAddActionElement().addEventListener(
-    "click",
-    () => { addActionElement; });  
     
 });
 
-  document.body.onload = addElement;
-  
-  function addActionClick() {
-    const addActionElement = event.target;
-    addActionElement.disabled = true;
-    var newDiv = document.createElement("div"); 
-    var newContent = document.createTextNode("Product"); 
-    newDiv.appendChild(newContent);
-
-    var currentDiv = document.getElementById("actions"); 
-    document.body.insertBefore(newDiv, currentDiv);
-  }
 
   //Getters and setters
-  function getAddActionElement() {
-  	return document.getElementById("addButton");
-  }
 
   function getCancelActionElement() {
   	return document.getElementById("cancelButton");
