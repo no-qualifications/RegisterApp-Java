@@ -1,3 +1,4 @@
+document.body.onload = addElement;
 document.addEventListener("DOMContentLoaded", function(event) {
   
   getCancelActionElement().addEventListener(
