@@ -20,17 +20,32 @@
 		<div id="error" th:class="${#strings.isEmpty(errorMessage)} ? hidden : ''">
 			<h4 id="errorMessage" class="error-message" th:text="${errorMessage}"></h4>
 		</div>
+		<div class="transactionSummaryWrapper">
+			<table id="transactionSummary">
+				<tbody>
+					<tr>
+						<th>Product:</th>
+						<th>Count:</th>
+						<th>Price:</th>
+					</tr>
+					<tr>
+						<td>Total Price:</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Total Product count:</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 
-		<table id="employeeDetails">
-			<tbody>
-				<tr>
-					<td>Product:</td>
-					<td>Count:</td>
-				</tr>
-			</tbody>
-		</table>
-
-		<button id="mainMenuButton" type="button" class="action">Main menu</button>
+		<div id ="actions" class="transactionSummaryActionsWrapper" th:class="(not ${isElevatedUser} OR not ${#strings.isEmpty(errorMessage)}) ? hidden : ''">
+			<br />
+			<button id="cancelButton" type="button" class="action">Cancel</button>
+			<br />
+			<button id="completeTransactionButton" type="button" class="action">Complete Transaction</button>
+		</div>
 
 		<div class="footer">
 			<img id="signOutImage" src="/images/Sign-Out.png" alt="Sign Out" class="footer" />

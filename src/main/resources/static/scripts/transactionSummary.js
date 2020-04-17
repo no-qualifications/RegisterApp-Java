@@ -1,9 +1,17 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-    getMainMenuActionElement().addEventListener(
+    getCancelActionElement().addEventListener(
 		"click",
-		() => { window.location.assign("/"); });
+		() => { window.location.assign("/mainMenu"); });
+
+	getCompleteTrasnactionActionElement().addEventListener(
+		"click",
+		() => { window.location.assign("/mainMenu"); });
 });
 
-function getMainMenuActionElement() {
-	return document.getElementById("mainMenuButton");
+function getCancelActionElement() {
+	return document.getElementById("cancelButton");
+}
+
+function getCompleteTransactionActionElement() {
+	return document.getElementById("completeTransactionButton");
 }
