@@ -8,12 +8,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
     "click",
     () => { window.location.assign("/transactionSummary"); });
     
-  getAddActionElement().addEventListener(
-    "click",
-    () => { addActionClick(); });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+	getAddActionElement.addEventListener("click", addActionClick);
 });
   
-  function addActionClick(){
+  function addActionClick(event){
+    const addActionElement = event.target;
+    saveActionElement.disabled = true;
     var newDiv = document.createElement("div"); 
     var newContent = document.createTextNode("Product"); 
     newDiv.appendChild(newContent);
