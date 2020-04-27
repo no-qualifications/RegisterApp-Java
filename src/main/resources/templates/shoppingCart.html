@@ -11,6 +11,7 @@
 	<script type="text/javascript" src="/scripts/shoppingCart.js" defer></script>
 
 	<script type="text/javascript" src="/scripts/productListing.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="/styles/productListing.css">
 </head>
 
 <body>
@@ -55,11 +56,7 @@
 				<h4 id="errorMessage" class="error-message" th:text="${errorMessage}"></h4>
 			</div>
 	
-			<div class="productsWrapper">
-				<div th:class="not ${isElevatedUser} ? hidden : ''">
-					<a href="/productDetail/" class="button">Create New</a>
-				</div>
-	
+			<div class="productsWrapper">	
 				<br /><br />
 	
 				<ul id="productsListing" class="products">
