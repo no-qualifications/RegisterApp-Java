@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import edu.uark.registerapp.commands.products.ProductsQuery;
 import edu.uark.registerapp.commands.products.ProductQuery;
 import edu.uark.registerapp.controllers.enums.ViewModelNames;
 import edu.uark.registerapp.controllers.enums.ViewNames;
@@ -47,6 +48,19 @@ public class ShoppingCartRouteController extends BaseRouteController {
 		modelAndView.addObject(
 			ViewModelNames.PRODUCT.getValue(),
 			(new Product()).setLookupCode(StringUtils.EMPTY).setCount(0));
+
+			try {
+				modelAndView.addObject(
+					ViewModelNames.PRODUCTS.getValue(),
+					this.productsQuery.execute());
+			} catch (final Exception e) {
+				modelAndView.addObject(
+					ViewModelNames.ERROR_MESSAGE.getValue(),
+					e.getMessage());
+				modelAndView.addObject(
+					ViewModelNames.PRODUCTS.getValue(),
+					(new Product[0]));
+			}
 
 		return modelAndView;
 	}
@@ -95,4 +109,5 @@ public class ShoppingCartRouteController extends BaseRouteController {
 	// Properties
 	@Autowired
 	private ProductQuery productQuery;
+	private ProductsQuery productsQuery;
 }
