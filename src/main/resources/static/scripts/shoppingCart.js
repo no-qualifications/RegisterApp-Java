@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(event) {
+  const searchText = document.getElementById("productLookupCode").value;
   
   getCancelActionElement().addEventListener(
     "click",
@@ -12,6 +13,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     "click",
     () => { addActionElement; });  
 });
+
+function ajaxGet(resourceRelativeUri, callback) {
+	return ajax(resourceRelativeUri, "GET", null, callback);
+}
 
 document.body.onload = addElement;
   
