@@ -50,12 +50,13 @@ public class ShoppingCartRouteController extends BaseRouteController {
 			ViewModelNames.PRODUCT.getValue(),
 			(new Product()).setLookupCode(StringUtils.EMPTY).setCount(0));
 
+		/*
 		try {
 			this.productByLookupCodeQuery.execute();
 		} catch (NotFoundException e) {
 			return new ModelAndView(REDIRECT_PREPEND.concat(ViewNames.EMPLOYEE_DETAIL.getRoute()));
 		}
-
+		*/
 
 		return modelAndView;
 	}
