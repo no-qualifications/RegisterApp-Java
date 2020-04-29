@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import edu.uark.registerapp.commands.exceptions.NotFoundException;
-import edu.uark.registerapp.commands.products.ProductByLookupCodeQuery;
+//import edu.uark.registerapp.commands.exceptions.NotFoundException;
+//import edu.uark.registerapp.commands.products.ProductByLookupCodeQuery;
 import edu.uark.registerapp.commands.products.ProductQuery;
 import edu.uark.registerapp.commands.products.ProductsQuery;
 import edu.uark.registerapp.controllers.enums.ViewModelNames;
@@ -119,8 +119,8 @@ public class ShoppingCartRouteController extends BaseRouteController {
 	@Autowired
 	private ProductQuery productQuery;
 
-	@Autowired
-	private ProductByLookupCodeQuery productByLookupCodeQuery;
+	//@Autowired
+	//private ProductByLookupCodeQuery productByLookupCodeQuery;
 
 	@Autowired
 	private ProductsQuery productsQuery;
