@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import edu.uark.registerapp.commands.exceptions.NotFoundException;
+import edu.uark.registerapp.commands.products.ProductByLookupCodeQuery;
 import edu.uark.registerapp.commands.products.ProductQuery;
 import edu.uark.registerapp.controllers.enums.ViewModelNames;
 import edu.uark.registerapp.controllers.enums.ViewNames;
@@ -47,6 +49,12 @@ public class ShoppingCartRouteController extends BaseRouteController {
 		modelAndView.addObject(
 			ViewModelNames.PRODUCT.getValue(),
 			(new Product()).setLookupCode(StringUtils.EMPTY).setCount(0));
+
+		try {
+			this.productByLookupCodeQuery.execute();
+		} catch (NotFoundException e) {
+			return new ModelAndView(REDIRECT_PREPEND.concat(ViewNames.EMPLOYEE_DETAIL.getRoute()));
+		}
 
 
 		return modelAndView;
@@ -96,4 +104,7 @@ public class ShoppingCartRouteController extends BaseRouteController {
 	// Properties
 	@Autowired
 	private ProductQuery productQuery;
+
+	@Autowired
+	private ProductByLookupCodeQuery productByLookupCodeQuery;
 }
