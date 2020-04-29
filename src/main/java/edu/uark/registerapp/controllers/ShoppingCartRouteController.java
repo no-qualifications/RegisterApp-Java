@@ -17,8 +17,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 //import edu.uark.registerapp.commands.exceptions.NotFoundException;
 //import edu.uark.registerapp.commands.products.ProductByLookupCodeQuery;
+import edu.uark.registerapp.models.api.Transaction;
 import edu.uark.registerapp.commands.products.ProductQuery;
 import edu.uark.registerapp.commands.products.ProductsQuery;
+import edu.uark.registerapp.commands.transactions.TransactionEntryQuery;
 import edu.uark.registerapp.controllers.enums.ViewModelNames;
 import edu.uark.registerapp.controllers.enums.ViewNames;
 import edu.uark.registerapp.models.api.Product;
@@ -58,6 +60,8 @@ public class ShoppingCartRouteController extends BaseRouteController {
 			modelAndView.addObject(ViewNames.SHOPPING_CART.getViewName(), queryParameters);
 		}
 		*/
+
+		//testing
 		try {
 			modelAndView.addObject(
 				ViewModelNames.PRODUCTS.getValue(),
@@ -70,6 +74,16 @@ public class ShoppingCartRouteController extends BaseRouteController {
 				ViewModelNames.PRODUCTS.getValue(),
 				(new Product[0]));
 		}
+
+		//testing
+		try {
+			modelAndView.addObject(ViewModelNames.TRANSACTION_ENTRY.getValue(), this.transactionEntryQuery.execute());
+		} catch (final Exception e) {
+			modelAndView.addObject(ViewModelNames.ERROR_MESSAGE.getValue(), e.getMessage());
+			modelAndView.addObject(ViewModelNames.TRANSACTION_ENTRY.getValue(), new Transaction[0]);
+		}
+
+
 
 		return modelAndView;
 	}
@@ -124,4 +138,7 @@ public class ShoppingCartRouteController extends BaseRouteController {
 
 	@Autowired
 	private ProductsQuery productsQuery;
+
+	@Autowired
+	private TransactionEntryQuery transactionEntryQuery;
 }
