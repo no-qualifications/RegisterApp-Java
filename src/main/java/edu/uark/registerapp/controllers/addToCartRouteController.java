@@ -72,7 +72,7 @@ public class addToCartRouteController extends BaseRouteController {
 
         final ModelAndView modelAndView =
 			this.setErrorMessageFromQueryString(
-				new ModelAndView(ViewNames.PRODUCT_DETAIL.getViewName()),
+				new ModelAndView(ViewNames.ADD_TO_CART.getViewName()),
                 queryParameters);
             
         modelAndView.addObject(
