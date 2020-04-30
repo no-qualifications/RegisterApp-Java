@@ -2,7 +2,7 @@ package edu.uark.registerapp.controllers;
 
 import java.util.Map;
 import java.util.Optional;
-import java.util.UUID;
+
 import org.apache.commons.lang3.StringUtils;
 import javax.servlet.http.HttpServletRequest;
 import edu.uark.registerapp.controllers.enums.ViewModelNames;
@@ -16,7 +16,7 @@ import edu.uark.registerapp.models.entities.ActiveUserEntity;
 import edu.uark.registerapp.controllers.enums.ViewNames;
 
 @Controller
-@RequestMapping(value="/shoppingCartDetail.html")
+@RequestMapping(value="/shoppingCartDetail")
 public class addToCartRouteController extends BaseRouteController {
     @RequestMapping(method = RequestMethod.GET)
     public ModelAndView start(
