@@ -61,8 +61,7 @@
 							<br />&nbsp;&nbsp;<span class="productCreatedOnDisplay" th:text="${product.createdOn}">12/31/1999</span>
 							<br />&nbsp;&nbsp;<span class="quantity" th:text="Quantity in cart: ">0</span> 
 							<br />&nbsp;&nbsp;<span type="number" id="${product.id}" name="points" step="1" value="0"></span> 
-
-							<button onclick="removeFromCart()" id="${product.id}">Remove from cart</button>
+							<br />&nbsp;&nbsp;<span><button onclick="removeFromCart()" id="${product.id}">Remove from cart</button></span> 
 							<script>
 								function removeFromCart() {
 								  document.getElementById("${product.id}").innerHTML = "0";
