@@ -6,7 +6,6 @@
 
 	<link rel="stylesheet" type="text/css" href="/styles/master.css">
 	
-	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 	<script type="text/javascript" src="/scripts/master.js" defer></script>
 	<script type="text/javascript" src="/scripts/shoppingCart.js" defer></script>
 
@@ -65,14 +64,6 @@
 							<span class="productLookupCodeDisplay" th:text="${product.lookupCode}">lookupCode</span>
 							<br />&nbsp;&nbsp;<span class="productCountDisplay" th:text="${product.count}">0</span>
 							<br />&nbsp;&nbsp;<span class="productCreatedOnDisplay" th:text="${product.createdOn}">12/31/1999</span>
-							<div class="adjustCart">
-								<span>Quantity</span>
-								<button class="removeFromCart">Remove From Cart</button>
-								<script>
-									$('.removeFromCart').on('click', function() {
-     									$(this).closest('li').remove();
-									});
-								</script>
 							</div>
 						</div>
 					</li>
