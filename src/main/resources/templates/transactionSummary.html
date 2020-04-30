@@ -40,6 +40,15 @@
 			</table>
 		</div>
 
+		<div class="cartWrapper">
+			<ul id="transactionListing" class="transactions">
+				<li th:each="transaction : ${transactions}">
+					<span><input type="hidden" name="transactionId" th:value="${transaction.transactionid}">transactionId</span>
+					<span class="transactionQuantityDisplay" th:text="${transaction.quantity}">0</span>
+				</li>
+			</ul>
+		</div>
+
 		<div id ="actions" class="transactionSummaryActionsWrapper" th:class="(not ${isElevatedUser} OR not ${#strings.isEmpty(errorMessage)}) ? hidden : ''">
 			<br />
 			<button id="cancelButton" type="button" class="action">Cancel</button>
