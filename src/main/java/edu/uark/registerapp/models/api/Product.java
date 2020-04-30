@@ -56,6 +56,16 @@ public class Product extends ApiResponse {
 			createdOn.format(DateTimeFormatter.ofPattern("MM/dd/yyyy"));
 
 		return this;
+
+	}
+
+	private int price;
+	public int getPrice(){
+		return this.price;
+	}
+	public Product setPrice(int price){
+		this.price=price;
+		return this;
 	}
 
 	public Product() {
