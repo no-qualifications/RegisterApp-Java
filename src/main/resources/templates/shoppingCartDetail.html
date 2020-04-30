@@ -50,11 +50,7 @@
 
 		<div class="productActionsWrapper" th:class="(not ${isElevatedUser} OR not ${#strings.isEmpty(errorMessage)}) ? hidden : ''">
 			<br />
-			<div id="deleteActionContainer" th:class="${product.isEmpty} ? hidden : ''">
-				<button id="deleteButton" type="button" class="action">Delete</button>
-				<br />
-				<br />
-			</div>
+		
 			<button id="addToCartButton" type="button" class="action">Add to Cart</button>
 		</div>
 

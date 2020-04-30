@@ -43,17 +43,15 @@
 						</td>
 					</tr>
 					<tr>
-						<td class="label">Count:</td>
-						<td>
-							<input id="productCount" type="number" th:value="${!product.isEmpty} ? ${product.count} : ''" class="update" th:disabled="not ${isElevatedUser}" />
-						</td>
+					 <button id="searchCode" type="button">Search</button>
 					</tr>
 				</tbody>
 			</table>
 		</div>
 
-		TESTING
-			<div class="productsWrapper">	
+		
+			<div class="productsWrapper">
+				<h3>Products</h3>	
 				<br /><br />
 	
 				<ul id="productsListing" class="products">
