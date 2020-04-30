@@ -132,6 +132,9 @@ public class ShoppingCartRouteController extends BaseRouteController {
 	// Properties
 	@Autowired
 	private ProductQuery productQuery;
+	
+	@Autowired
+	private ProductByPartialLookupCodeQuery productByPartialLookupCodeQuery;
 
 	//@Autowired
 	//private ProductByLookupCodeQuery productByLookupCodeQuery;
