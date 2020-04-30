@@ -6,7 +6,6 @@
 
 	<link rel="stylesheet" type="text/css" href="/styles/master.css">
 	
-	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 	<script type="text/javascript" src="/scripts/master.js" defer></script>
 	<script type="text/javascript" src="/scripts/shoppingCart.js" defer></script>
 
@@ -67,7 +66,7 @@
 							<div class="adjustCart">
 								<span>Quantity</span>
 								<button class="removeFromCart">Remove From Cart</button>
-								<script>
+								<script src="https://code.jquery.com/jquery-3.5.0.js">
 									$('.removeFromCart').on('click', function() {
      									$(this).closest('li').remove();
 									});
