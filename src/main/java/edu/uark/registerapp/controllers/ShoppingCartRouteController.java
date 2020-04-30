@@ -90,9 +90,6 @@ public class ShoppingCartRouteController extends BaseRouteController {
 				(new Transaction[0]));
 		}
 
-		//
-
-
 
 
 		return modelAndView;
@@ -149,6 +146,7 @@ public class ShoppingCartRouteController extends BaseRouteController {
 
 	//@Autowired
 	//private ProductByLookupCodeQuery productByLookupCodeQuery;
+
 	@Autowired
 	private ProductByPartialLookupCodeQuery productByPartialLookupCodeQuery;
 
