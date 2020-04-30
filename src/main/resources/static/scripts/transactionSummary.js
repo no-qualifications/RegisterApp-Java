@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		"click",
 		() => { window.location.assign("/mainMenu"); });
 
-	getCompleteTrasnactionActionElement().addEventListener(
+	getCompleteTransactionActionElement().addEventListener(
 		"click",
 		() => { window.location.assign("/mainMenu"); });
 });

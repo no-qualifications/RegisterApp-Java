@@ -73,8 +73,8 @@
 
 			<div class="cartWrapper">
 				<ul id="transactionListing" class="transactions">
-					<li th:each="transaction : ${tranactions}">
-						<input type="hidden" name="tranactionId" th:value="${transaction.id}">transactionId</span>
+					<li th:each="transaction : ${transactions}">
+						<input type="hidden" name="transactionId" th:value="${transaction.id}">transactionId</span>
 						<span class="transactionQuantityDisplay" th:text="${transaction.quantity}">0</span>
 					</li>
 				</ul>
