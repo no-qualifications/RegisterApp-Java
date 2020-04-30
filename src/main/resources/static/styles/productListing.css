@@ -12,8 +12,8 @@
 .products li {
 	cursor: pointer;
 	background-color: #EEE;
-	margin: .5em;
-	padding: 1em;
+	margin: 2m;
+	padding: .3em;
 	height: 3.5em;
 	border-radius: 4px;
 	text-align: left;
