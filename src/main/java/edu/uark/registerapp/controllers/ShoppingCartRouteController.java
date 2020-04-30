@@ -130,7 +130,7 @@ public class ShoppingCartRouteController extends BaseRouteController {
 					.setLookupCode(StringUtils.EMPTY));
 		}
 
-		for(Product product:)
+		
 
 		return modelAndView;
 	}
