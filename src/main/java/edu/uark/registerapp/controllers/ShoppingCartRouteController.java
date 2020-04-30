@@ -78,10 +78,16 @@ public class ShoppingCartRouteController extends BaseRouteController {
 
 		//testing
 		try {
-			modelAndView.addObject(ViewModelNames.TRANSACTION_ENTRY.getValue(), this.transactionEntryQuery.execute());
+			modelAndView.addObject(
+				ViewModelNames.TRANSACTION_ENTRY.getValue(), 
+				this.transactionEntryQuery.execute());
 		} catch (final Exception e) {
-			modelAndView.addObject(ViewModelNames.ERROR_MESSAGE.getValue(), e.getMessage());
-			modelAndView.addObject(ViewModelNames.TRANSACTION_ENTRY.getValue(), new Transaction[0]);
+			modelAndView.addObject(
+				ViewModelNames.ERROR_MESSAGE.getValue(), 
+				e.getMessage());
+			modelAndView.addObject(
+				ViewModelNames.TRANSACTION_ENTRY.getValue(),
+				(new Transaction[0]));
 		}
 
 		//
