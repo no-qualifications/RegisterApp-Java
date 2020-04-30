@@ -42,9 +42,7 @@
 							<input id="productLookupCode" type="text" th:value="${!product.isEmpty} ? ${product.lookupCode} : ''" class="update" th:disabled="not ${isElevatedUser}" />
 						</td>
 					</tr>
-					<tr>
-					 <button id="searchCode" type="button">Search</button>
-					</tr>
+					
 				</tbody>
 			</table>
 		</div>
@@ -62,7 +60,6 @@
 							<br />&nbsp;&nbsp;<span class="productCountDisplay" th:text="${product.count}">0</span>
 							<br />&nbsp;&nbsp;<span class="productCreatedOnDisplay" th:text="${product.createdOn}">12/31/1999</span>
 							</div>
-						</div>
 					</li>
 				</ul>
 			</div>
@@ -72,7 +69,7 @@
 			<div class="cartWrapper">
 				<ul id="transactionListing" class="transactions">
 					<li th:each="transaction : ${transactions}">
-						<input type="hidden" name="transactionId" th:value="${transaction.id}">transactionId</span>
+						<span><input type="hidden" name="transactionId" th:value="${transaction.id}">transactionId</span>
 						<span class="transactionQuantityDisplay" th:text="${transaction.quantity}">0</span>
 					</li>
 				</ul>
@@ -83,7 +80,8 @@
 
 		<div id ="actions" class="shoppingCartActionsWrapper" th:class="(not ${isElevatedUser} OR not ${#strings.isEmpty(errorMessage)}) ? hidden : ''">
 			<br />
-			
+			<button id="searchCode" type="button" class="action">Search Lookup Code</button>
+	  	</br>
 			<button id="addButton" type="button" class="action">Add to Cart</button>
       <br />
       <button id="cancelButton"	type="button" class="action">Cancel</button>
