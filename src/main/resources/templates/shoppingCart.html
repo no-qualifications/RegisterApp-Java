@@ -63,7 +63,7 @@
 							<input type="number" id="${product.id}" name="points" step="1" value="0">
 							<button onclick="removeFromCart()" id="${product.id}">Remove from cart</button>
 							<script>
-								function myFunction() {
+								function removeFromCart() {
 								  document.getElementById("${product.id}").innerHTML = "0";
 								}
 							</script>
