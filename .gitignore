@@ -6,3 +6,5 @@ mvnw
 mvnw.cmd
 target/
 
+src/main/.DS_Store
+src/main/resources/.DS_Store
