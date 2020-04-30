@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const productLookupCodeElement = getProductLookupCodeElement();
   getCancelAdd().addEventListener(
 		"click",
-		() => {window.location.assign("/shoppingCartDetail"); });
+		() => {window.location.assign("/shoppingCart"); });
 		
 	getProductCountElement().addEventListener("keypress", productCountKeypress);
 	productLookupCodeElement.addEventListener("keypress", productLookupCodeKeypress);
