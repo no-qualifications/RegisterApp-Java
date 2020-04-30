@@ -29,8 +29,8 @@ function productClick(event) {
 	let listItem = findClickedListItemElement(event.target);
 
 	window.location.assign(
-		"/shoppingCartDetail/"
-		+ listItem.querySelector("input[name='productId'][type='hidden']").value);
+		"/shoppingCartDetail/");
+		//+ listItem.querySelector("input[name='productId'][type='hidden']").value);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
