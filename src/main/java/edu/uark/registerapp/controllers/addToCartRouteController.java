@@ -29,14 +29,14 @@ public class addToCartRouteController extends BaseRouteController {
 			return this.buildInvalidSessionResponse();
 		} else if (!this.isElevatedUser(activeUserEntity.get())) {
 			return this.buildNoPermissionsResponse(
-				ViewNames.PRODUCT_LISTING.getRoute());
+				ViewNames.ADD_TO_CART.getRoute());
         }
 
         
         
         final ModelAndView modelAndView =
 			this.setErrorMessageFromQueryString(
-				new ModelAndView(ViewNames.PRODUCT_DETAIL.getViewName()),
+				new ModelAndView(ViewNames.ADD_TO_CART.getViewName()),
                 queryParameters);
 
                 modelAndView.addObject(

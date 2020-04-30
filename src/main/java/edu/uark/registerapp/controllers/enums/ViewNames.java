@@ -7,7 +7,8 @@ public enum ViewNames {
 	EMPLOYEE_DETAIL("employeeDetail"),
 	PRODUCT_LISTING("productListing"),
 	SHOPPING_CART("shoppingCart"),
-	TRANSACTION_SUMMARY("transactionSummary");
+	TRANSACTION_SUMMARY("transactionSummary"),
+	ADD_TO_CART("addToCart");
 	
 	public String getRoute() {
 		return this.route;
