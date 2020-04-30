@@ -2,7 +2,10 @@ let hideProductSavedAlertTimer = undefined;
 
 document.addEventListener("DOMContentLoaded", () => {
 	const productLookupCodeElement = getProductLookupCodeElement();
-
+  getCancelAdd().addEventListener(
+		"click",
+		() => {window.location.assign("/shoppingCartDetail"); });
+		
 	getProductCountElement().addEventListener("keypress", productCountKeypress);
 	productLookupCodeElement.addEventListener("keypress", productLookupCodeKeypress);
 	
@@ -139,6 +142,9 @@ function deleteActionClick(event) {
 // End delete
 
 // Getters and setters
+function getCancelAdd(){
+	return document.getElementById("cancelAdd");
+}
 function getSaveActionElement() {
 	return document.getElementById("saveButton");
 }
