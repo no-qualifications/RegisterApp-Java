@@ -18,6 +18,7 @@ import org.springframework.web.servlet.ModelAndView;
 //import edu.uark.registerapp.commands.exceptions.NotFoundException;
 //import edu.uark.registerapp.commands.products.ProductByLookupCodeQuery;
 import edu.uark.registerapp.models.api.Transaction;
+import edu.uark.registerapp.commands.products.ProductByPartialLookupCodeQuery;
 import edu.uark.registerapp.commands.products.ProductQuery;
 import edu.uark.registerapp.commands.products.ProductsQuery;
 import edu.uark.registerapp.commands.transactions.TransactionEntryQuery;
@@ -83,6 +84,9 @@ public class ShoppingCartRouteController extends BaseRouteController {
 			modelAndView.addObject(ViewModelNames.TRANSACTION_ENTRY.getValue(), new Transaction[0]);
 		}
 
+		//
+
+
 
 
 		return modelAndView;
@@ -126,6 +130,8 @@ public class ShoppingCartRouteController extends BaseRouteController {
 					.setLookupCode(StringUtils.EMPTY));
 		}
 
+		for(Product product:)
+
 		return modelAndView;
 	}
 
@@ -137,6 +143,8 @@ public class ShoppingCartRouteController extends BaseRouteController {
 
 	//@Autowired
 	//private ProductByLookupCodeQuery productByLookupCodeQuery;
+	@Autowired
+	private ProductByPartialLookupCodeQuery productByPartialLookupCodeQuery;
 
 	@Autowired
 	private ProductsQuery productsQuery;

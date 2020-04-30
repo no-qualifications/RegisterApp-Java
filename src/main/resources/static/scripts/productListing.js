@@ -32,3 +32,11 @@ function productClick(event) {
 		"/productDetail/"
 		+ listItem.querySelector("input[name='productId'][type='hidden']").value);
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+	const transactionListElements = document.getElementById("transactionListing").children;
+  
+	for(let i=0; i< transactionListElements.length; i++) {
+	  transactionListElements[i].addEventListener("click", transactionClick);
+	}
+  });
