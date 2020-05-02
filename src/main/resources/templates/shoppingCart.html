@@ -59,14 +59,6 @@
 							LookupCode: <span class="productLookupCodeDisplay" th:text="${product.lookupCode}">lookupCode</span>
 							<br />&nbsp;&nbsp;Count: <span class="productCountDisplay" th:text="${product.count}">0</span>
 							<br />&nbsp;&nbsp;Created on: <span class="productCreatedOnDisplay" th:text="${product.createdOn}">12/31/1999</span>
-						<label for="cartQuantity">Quantity in cart:</label>
-						<input type="number" id="${product.id}" name="points" step="1" value="0">
-						<button onclick="removeFromCart()" id="${product.id}">Remove from cart</button>
-						<script>
-							function myFunction() {
-							  document.getElementById("${product.id}").innerHTML = "0";
-							}
-						</script>
 					</div>
 						</div>
 					</li>
